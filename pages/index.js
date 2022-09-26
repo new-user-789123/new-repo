@@ -3,16 +3,18 @@ import Image from 'next/image'
 import  styles from '../styles/Home.module.css'
 import { useState,useEffect } from 'react';
 import ReactPlayer from 'react-player';
-
+import { useRouter } from 'next/router';
 
 export default function Home() {
 
+  const router = useRouter()
   const [showVideo,setShowVideo] = useState(true)
 
   const [video,setVideo] = useState(null)
   const [video2,setVideo2] = useState(null)
 
   const myCallback = () => {
+    router.push("/dashboard")
     setShowVideo(false)
   };
 
