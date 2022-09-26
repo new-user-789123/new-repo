@@ -19,13 +19,13 @@ export default function Home() {
   
   useEffect(()=>{
     setVideo(
-      <video className={styles.videoIntroOverlay} preload="auto" autoPlay={true} onEnded={() => myCallback()}>
+      <video className={styles.videoIntroOverlay} preload="auto" muted autoPlay={true} onEnded={() => myCallback()}>
         <source src="./video2.webm" type="video/webm"/>
         Your browser does not support the video tag.
       </video>
     )
     setVideo2(
-      <video className={styles.videoIntro} preload="auto" autoPlay={true}>
+      <video className={styles.videoIntro} preload="auto" muted autoPlay={true}>
         <source src="./video4.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
