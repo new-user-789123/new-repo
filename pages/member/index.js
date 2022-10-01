@@ -39,7 +39,7 @@ export default function MemberLogin(){
         </Flex>
         {
           loginClicked &&
-          <Alert status={loginStatus} marginBottom="20px" variant='left-accent' onClick={()=>loginSuccess()}>
+          <Alert status={loginStatus} marginBottom="20px" variant='left-accent' >
             <AlertIcon />
             <AlertTitle>{loginMessage}</AlertTitle>
           </Alert>
