@@ -118,6 +118,15 @@ function CallToActionWithVideo() {
               quod in iure vero. Facilis magnam, sed officiis commodi labore
               odit.
           </Text>
+          <Stack width="max-content">
+            <Button
+              bg={'purple.400'}
+              rounded={'full'}
+              color={'white'}
+              _hover={{ bg: 'purple.500' }}>
+              Join Discord
+            </Button>
+          </Stack>
         </Stack>
         <Flex
           flex={1}
@@ -205,10 +214,10 @@ function WithBackgroundImage() {
           </Text>
           <Stack direction={'row'}>
             <Button
-              bg={'blue.400'}
+              bg={'purple.400'}
               rounded={'full'}
               color={'white'}
-              _hover={{ bg: 'blue.500' }}>
+              _hover={{ bg: 'purple.500' }}>
               Join Discord
             </Button>
             <Button
@@ -255,7 +264,7 @@ function CallToActionWithIllustration() {
             colorScheme={'purple'}
             bg={'purple.400'}
             _hover={{ bg: 'purple.500' }}>
-            Join As Customer
+            Fill Membership Form
           </Button>
         </Stack>
         
