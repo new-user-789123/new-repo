@@ -9,7 +9,7 @@ import { Box, Container, Stack, Link } from "@chakra-ui/react"
 import NextLink from "next/link"
 
 
-export default function DashboardLogin(){
+export default function MemberLogin(){
   const {toggleColorMode} = useColorMode()
   const formBackgroundColor = useColorModeValue("gray.400","gray.900")
   const backgroundColor = useColorModeValue("gray.300","gray.700")
@@ -35,7 +35,7 @@ export default function DashboardLogin(){
       <Flex direction="column" background={formBackgroundColor} p={12} rounded={6}  boxShadow='dark-lg'>
         <Flex justifyContent="center" alignItems="center"  direction="column">
           <Img border="4px" padding="2px" objectFit="" boxSize="100px" src="/favicon.jpg" alt="bg-image" marginBottom="10px" borderRadius="full"/>
-          <Heading marginBottom="20px">Dashboard Login</Heading>
+          <Heading marginBottom="20px">Member Login</Heading>
         </Flex>
         {
           loginClicked &&

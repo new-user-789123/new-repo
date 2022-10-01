@@ -1,6 +1,6 @@
 import { Button, Flex, Heading, Input, useColorMode, useColorModeValue, Img } from "@chakra-ui/react";
 import { Box, Spacer, Text } from "@chakra-ui/react";
-import { Container, Stack, Icon } from '@chakra-ui/react';
+import { Container, Stack, Icon, Link } from '@chakra-ui/react';
 import { useState } from "react";
 import { SunIcon,MoonIcon } from '@chakra-ui/icons';
 import {
@@ -26,7 +26,7 @@ import {
   VStack,
   useBreakpointValue
 } from '@chakra-ui/react';
-
+import NextLink from "next/link"
 
 export default function DashboardLogin(){
   const {toggleColorMode} = useColorMode()
@@ -73,7 +73,7 @@ export default function DashboardLogin(){
       <Divider/>
       {JoinOurCommunity()}
       <Divider/>
-      {SmallWithLogoLeft()}
+      {SmallCentered()}
     </Flex>
   )
 }
@@ -420,6 +420,7 @@ const ThreeTierPricingHorizontal = () => {
 
 
 
+
 const Logo = (props) => {
   return (
     <Img boxSize="50px" src="/favicon.jpg" alt="bg-image" borderRadius="full"/>
@@ -453,7 +454,7 @@ const SocialButton = ({
   );
 };
 
-function SmallWithLogoLeft() {
+function SmallCentered() {
   return (
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
@@ -462,24 +463,44 @@ function SmallWithLogoLeft() {
         as={Stack}
         maxW={'6xl'}
         py={4}
-        direction={{ base: 'column', md: 'row' }}
         spacing={4}
-        justify={{ base: 'center', md: 'space-between' }}
-        align={{ base: 'center', md: 'center' }}>
+        justify={'center'}
+        align={'center'}>
         <Logo />
-        <Text>© 2022 Reign Forest. All rights reserved</Text>
         <Stack direction={'row'} spacing={6}>
-          <SocialButton label={'Twitter'} href={'#'}>
-            <FaTwitter />
-          </SocialButton>
-          <SocialButton label={'YouTube'} href={'#'}>
-            <FaYoutube />
-          </SocialButton>
-          <SocialButton label={'Instagram'} href={'#'}>
-            <FaInstagram />
-          </SocialButton>
+          <NextLink href='/' passHref><Link>Home</Link></NextLink>
+          <NextLink href='/dashboard' passHref><Link>Dashboard</Link></NextLink>
+          <NextLink href='/staff' passHref><Link>Staff Dashboard</Link></NextLink>
+          <NextLink href='/member' passHref><Link>Member Dashboard</Link></NextLink>
         </Stack>
       </Container>
+
+      <Box
+        borderTopWidth={1}
+        borderStyle={'solid'}
+        borderColor={useColorModeValue('gray.200', 'gray.700')}>
+        <Container
+          as={Stack}
+          maxW={'6xl'}
+          py={4}
+          direction={{ base: 'column', md: 'row' }}
+          spacing={4}
+          justify={{ base: 'center', md: 'space-between' }}
+          align={{ base: 'center', md: 'center' }}>
+          <Text>© 2022 Chakra Templates. All rights reserved</Text>
+          <Stack direction={'row'} spacing={6}>
+            <SocialButton label={'Twitter'} href={'#'}>
+              <FaTwitter />
+            </SocialButton>
+            <SocialButton label={'YouTube'} href={'#'}>
+              <FaYoutube />
+            </SocialButton>
+            <SocialButton label={'Instagram'} href={'#'}>
+              <FaInstagram />
+            </SocialButton>
+          </Stack>
+        </Container>
+      </Box>
     </Box>
   );
 }

@@ -5,6 +5,8 @@ import {
   AlertTitle,
 } from '@chakra-ui/react'
 import { useState } from "react";
+import { Box, Container, Stack, Link } from "@chakra-ui/react"
+import NextLink from "next/link"
 
 export default function StaffLogin(){
   const {toggleColorMode} = useColorMode()
@@ -56,6 +58,50 @@ export default function StaffLogin(){
           <Button mb={1} onClick={toggleColorMode}>Toggle Color</Button>
         </Flex>     
       </Flex>
+      {SmallCentered()}
     </Flex>
   )
+}
+
+
+function SmallCentered() {
+  return (
+    <Box
+      bg="transparent"
+      color={useColorModeValue('gray.700', 'gray.200')}
+      width="100vw"
+      position="fixed"
+      bottom="0px"
+      marginTop="10px">
+      <Container
+        as={Stack}
+        maxW={'6xl'}
+        py={4}
+        spacing={4}
+        justify={'center'}
+        align={'center'}>
+        <Stack direction={'row'} spacing={6}>
+          <NextLink href='/' passHref><Link>Home</Link></NextLink>
+          <NextLink href='/dashboard' passHref><Link>Dashboard</Link></NextLink>
+          <NextLink href='/staff' passHref><Link>Staff Dashboard</Link></NextLink>
+          <NextLink href='/member' passHref><Link>Member Dashboard</Link></NextLink>
+        </Stack>
+      </Container>
+
+      <Box
+        borderTopWidth={1}
+        borderStyle={'solid'}
+        borderColor={useColorModeValue('gray.200', 'gray.700')}>
+        <Container
+          as={Stack}
+          maxW={'6xl'}
+          py={4}
+          direction={{ base: 'column', md: 'row' }}
+          spacing={4}
+          justify={{ base: 'center', md: 'space-between' }}
+          align={{ base: 'center', md: 'center' }}>
+        </Container>
+      </Box>
+    </Box>
+  );
 }
