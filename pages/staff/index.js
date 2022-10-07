@@ -1,4 +1,5 @@
 import { Button, Flex, Heading, Input, useColorMode, useColorModeValue, Img } from "@chakra-ui/react";
+import Cookie from 'js-cookie'
 import {
   Alert,
   AlertIcon,
@@ -7,6 +8,7 @@ import {
 import { useState } from "react";
 import { Box, Container, Stack, Link } from "@chakra-ui/react"
 import NextLink from "next/link"
+import { useRouter } from 'next/router'
 
 export default function StaffLogin(){
   const {toggleColorMode} = useColorMode()
@@ -16,19 +18,42 @@ export default function StaffLogin(){
   const [loginClicked, setLoginClicked] = useState(false)
   const [loginStatus, setLoginStatus] = useState("success")
   const [loginMessage, setLoginMessage] = useState("Login Success")
+  const router = useRouter()
 
-  const loginToDashboard = ()=>{
+
+  const [data,setData] = useState({
+    user:"",
+    pass:""
+  })
+  const { user, pass } = data
+  const changeHandler = e =>{
+    setData({...data,
+      [e.target.name]:
+      [e.target.value]
+    })
+  }
+  const loginFail = ()=>{
     setLoginClicked(true)
     setLoginStatus("error")
     setLoginMessage("Invalid email or password")
   }
 
   const loginSuccess = ()=>{
+    Cookie.set("loggedin",true)
     setLoginStatus("success")
     setLoginMessage("Login Success")
     setLogin(true)
+    setTimeout(()=>{
+      router.push('/staff/dashboard')
+    },5000)
   }
 
+  const loginToDashboard = ()=>{
+    if(user == "vibhuti" && pass == "vibhuti"){
+      return loginSuccess()
+    }
+    return loginFail()
+  }
   return (
     <Flex height="100vh" alignItems="center" justifyContent="center" background={backgroundColor}>
       <Flex direction="column" background={formBackgroundColor} p={12} rounded={6}  boxShadow='dark-lg'>
@@ -43,8 +68,8 @@ export default function StaffLogin(){
             <AlertTitle>{loginMessage}</AlertTitle>
           </Alert>
         }
-        <Input placeholder="Username or Email" variant="filled"  mb={3} type="text" marginBottom="10px"/>
-        <Input placeholder="***********" variant="filled" mb={6} type="password" marginBottom="30px"/>
+        <Input placeholder="Username or Email" variant="filled"  mb={3} type="text" marginBottom="10px" name="user" onChange={changeHandler}/>
+        <Input placeholder="***********" variant="filled" mb={6} type="password" marginBottom="30px" name="pass" onChange={changeHandler}/>
         {
           !login &&
           <Button mb={6} colorScheme="teal" marginBottom="5px" onClick={()=>loginToDashboard()}>Log in</Button>           
@@ -53,7 +78,6 @@ export default function StaffLogin(){
           login &&
           <Button mb={6} isLoading colorScheme='teal' variant='solid' marginBottom="5px">Log in</Button>           
         }
-        
         <Flex justifyContent="center" alignItems="center"  direction="row" marginBottom="20px" marginTop="10px">
           <Button mb={1} onClick={toggleColorMode}>Toggle Color</Button>
         </Flex>     

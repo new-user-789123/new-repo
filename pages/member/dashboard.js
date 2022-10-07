@@ -49,7 +49,7 @@ const LinkItems = [
   { name: 'Settings' },
 ];
 
-export default function StaffDashboard() {
+export default function MemberDashboard() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
@@ -93,7 +93,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
         <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
           {/* <Img border="4px" padding="2px" objectFit="" boxSize="100px" src="/favicon.jpg" alt="bg-image" marginBottom="10px" borderRadius="full"/> */}
-          Staff Dashboard
+          Member Dashboard
         </Text>
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
@@ -189,7 +189,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
         fontSize="2xl"
         fontFamily="monospace"
         fontWeight="bold">
-        Staff Dashboard
+        Member Dashboard
       </Text>
 
       <HStack spacing={{ base: '0', md: '6' }}>

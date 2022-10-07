@@ -95,6 +95,7 @@ function CallToActionWithVideo() {
             fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
             <Text
               as={'span'}
+              fontSize={'4xl'} 
               position={'relative'}
               _after={{
                 content: "''",
@@ -106,17 +107,15 @@ function CallToActionWithVideo() {
                 bg: 'red.400',
                 zIndex: -1,
               }}>
-              Reign
+              Reign Forest Discord Server  
             </Text>
             <br />
-            <Text as={'span'} color={'purple.400'}>
-              Forest
+            <Text  fontSize={'2xl'}  as={'span'} color={'purple.400'}>
+              Virginia’s Cannabis Community In Your Pocket!
             </Text>
           </Heading>
-          <Text color={'gray.500'}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              quod in iure vero. Facilis magnam, sed officiis commodi labore
-              odit.
+          <Text fontSize={'1xl'} color={'gray.500'}>
+          Reign Forest Virginia’s Cannabis Community In Your Pocket is a PRIVATE place to hang out in the very heart of the Virginia Cannabis / Hemp community. Providing accessible networking and education for the community, both in-person and virtually. Connect with others in the state of Virginia's Cannabis / Hemp community, make new friends throughout Virginia, engage in interesting chat or video discussions, listen to group chats with interesting concepts in the cannabis / hemp industry, and have a great time! Why wait any longer, we have been waiting on this all our lives!
           </Text>
           <Stack width="max-content">
             <Button
@@ -124,7 +123,7 @@ function CallToActionWithVideo() {
               rounded={'full'}
               color={'white'}
               _hover={{ bg: 'purple.500' }}>
-              Join Discord
+               Join NOW!
             </Button>
           </Stack>
         </Stack>
@@ -156,9 +155,7 @@ function CallToActionWithVideo() {
               align={'center'}
               w={'100%'}
               h={'100%'}
-              src={
-                'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
-              }
+              src={'/1BvogzXXVOcFiuRCEBlpGUuKdH8TRkJR_PDj-FC9a.png'}
             />
           </Box>
         </Flex>
@@ -207,10 +204,8 @@ function WithBackgroundImage() {
             color={'white'}
             fontWeight={700}
             lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
-            Events: Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-            eiusmod tempor <br />
-            Join Discord To Get Latest Information Of Events
+            fontSize={useBreakpointValue({ base: '2xl', md: '2xl' })}>
+            ACCESS TO OUR EVENTS, CHATS, & MORE; CAN BE FOUND ONLY IN OUR PRIVATE DISCORD SERVER: 
           </Text>
           <Stack direction={'row'}>
             <Button
@@ -247,15 +242,16 @@ function CallToActionWithIllustration() {
           fontWeight={600}
           fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
           lineHeight={'110%'}>
-          Join Our{' '}
+          The only platform {' '}
           <Text as={'span'} color={'purple.400'}>
-            Community
+          you need to engage
           </Text>
         </Heading>
-        <Text color={'gray.500'} maxW={'3xl'}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              quod in iure vero. Facilis magnam, sed officiis commodi labore
-              odit.
+        <Text color={'gray.900'} maxW={'4xl'}>
+          <br />
+            Join Reign Forest Discord Server  (BETA)<br />
+            Virginia’s Cannabis Community In Your Pocket! <br />
+            Together, we can create a new standard for a new industry!<br />
         </Text>
         <Stack spacing={6} direction={'row'}>
           <Button
@@ -284,15 +280,13 @@ function JoinOurCommunity() {
           fontWeight={600}
           fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
           lineHeight={'110%'}>
-            Be a {' '}
+            We {' '}
           <Text as={'span'} color={'purple.400'}>
-            Vendor
+            are looking for Vendor’s
           </Text>
         </Heading>
         <Text color={'gray.500'} maxW={'3xl'}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              quod in iure vero. Facilis magnam, sed officiis commodi labore
-              odit.
+        Looking for 10 vendors for our BETA reffeleral affilaietd program, Simplify your you deliveries with our custom delivery system and limited access to beable to create your own chat / video rooms. Sometimes the simplest features are the biggest time savers.Taking applications NOW.
         </Text>
         <Stack spacing={6} direction={'row'}>
           <Button
@@ -311,10 +305,35 @@ function JoinOurCommunity() {
 
 
 
-const options = [
-  { id: 1, desc: '1 lorem ipsum' },
-  { id: 2, desc: 'Lorem, ipsum dolor.' },
-  { id: 3, desc: 'Monthly Updates' },
+const optionsGeneral = [
+  { id: 1, desc: 'Access to PRIVATE Reign Forest Virginia’s Cannabis Community.' },
+  { id: 2, desc: 'Unlimited events (Unless stated otherwise)' },
+  { id: 2, desc: 'Limited access to the custom Reign Forest bot.' },
+  { id: 2, desc: 'FREE Cannabis / Hemp ebooks and research articles monthly.' },
+  { id: 2, desc: 'Limited chat/video rooms' },
+  { id: 2, desc: 'Random giveaways' },
+  { id: 3, desc: 'Free food deals.' },
+  { id: 3, desc: 'Limited multiple daily online deals from Amazon, Bestbuy, Walmart & more.' },
+];
+const optionsPremium = [
+  { id: 1, desc: 'Access to PRIVATE Reign Forest Virginia’s Cannabis Community.' },
+  { id: 2, desc: 'Unlimited events (Unless stated otherwise)' },
+  { id: 2, desc: 'Limited access to the custom Reign Forest bot.' },
+  { id: 2, desc: 'FREE Cannabis / Hemp ebooks and research articles monthly.' },
+  { id: 2, desc: 'Limited chat/video rooms' },
+  { id: 2, desc: 'Random giveaways' },
+  { id: 3, desc: 'Free food deals.' },
+  { id: 3, desc: 'Limited multiple daily online deals from Amazon, Bestbuy, Walmart & more.' },
+];
+const optionsVip = [
+  { id: 1, desc: 'Access to PRIVATE Reign Forest Virginia’s Cannabis Community.' },
+  { id: 2, desc: 'Unlimited events (Unless stated otherwise)' },
+  { id: 2, desc: 'Limited access to the custom Reign Forest bot.' },
+  { id: 2, desc: 'FREE Cannabis / Hemp ebooks and research articles monthly.' },
+  { id: 2, desc: 'Limited chat/video rooms' },
+  { id: 2, desc: 'Random giveaways' },
+  { id: 3, desc: 'Free food deals.' },
+  { id: 3, desc: 'Limited multiple daily online deals from Amazon, Bestbuy, Walmart & more.' },
 ];
 
 const PackageTier = ({
@@ -342,7 +361,7 @@ const PackageTier = ({
         md: 'row',
       }}
       alignItems={{ md: 'center' }}>
-      <Heading width="max-content" size={'md'}>{title}</Heading>
+      <Heading width="max-content" color={'#c58c3a'} size={'md'}>{title}</Heading>
       <List spacing={3} textAlign="start">
         {options.map((desc, id) => (
           <ListItem key={desc.id}>
@@ -401,13 +420,11 @@ const ThreeTierPricingHorizontal = () => {
           </Stack>
         </Stack>
         <Divider />
-        <PackageTier title={'Member'} typePlan="Free" options={options} />
+        <PackageTier title={'Member'} typePlan="Free" options={optionsGeneral} />
         <Divider />
-        <PackageTier title={'Plus'} typePlan="$32.00" options={options}/>
+        <PackageTier title={'Plus'} typePlan="$32.00" options={optionsPremium}/>
         <Divider />
-        <PackageTier title={'Vip'} typePlan="$50.00" options={options} />
-        <Divider />
-        <PackageTier title={'Premium'} typePlan="$50.00" options={options} />
+        <PackageTier title={'Vip'} typePlan="$50.00" options={optionsVip} />
       </Stack>
     </Box>
   );
