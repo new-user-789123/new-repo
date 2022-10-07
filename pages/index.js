@@ -484,12 +484,12 @@ function SmallCentered() {
         justify={'center'}
         align={'center'}>
         <Logo />
-        <Stack direction={'row'} spacing={6}>
+        {/* <Stack direction={'row'} spacing={6}>
           <NextLink href='/' passHref><Link>Home</Link></NextLink>
           <NextLink href='/dashboard' passHref><Link>Dashboard</Link></NextLink>
           <NextLink href='/staff' passHref><Link>Staff Dashboard</Link></NextLink>
           <NextLink href='/member' passHref><Link>Member Dashboard</Link></NextLink>
-        </Stack>
+        </Stack> */}
       </Container>
 
       <Box
