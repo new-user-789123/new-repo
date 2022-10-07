@@ -115,7 +115,7 @@ function CallToActionWithVideo() {
             </Text>
           </Heading>
           <Text fontSize={'1xl'} color={'gray.500'}>
-          Reign Forest Virginia’s Cannabis Community In Your Pocket is a PRIVATE place to hang out in the very heart of the Virginia Cannabis / Hemp community. Providing accessible networking and education for the community, both in-person and virtually. Connect with others in the state of Virginia's Cannabis / Hemp community, make new friends throughout Virginia, engage in interesting chat or video discussions, listen to group chats with interesting concepts in the cannabis / hemp industry, and have a great time! Why wait any longer, we have been waiting on this all our lives!
+          Reign Forest Virginia`s Cannabis Community In Your Pocket is a PRIVATE place to hang out in the very heart of the Virginia Cannabis / Hemp community. Providing accessible networking and education for the community, both in-person and virtually. Connect with others in the state of Virginia`s Cannabis / Hemp community, make new friends throughout Virginia, engage in interesting chat or video discussions, listen to group chats with interesting concepts in the cannabis / hemp industry, and have a great time! Why wait any longer, we have been waiting on this all our lives!
           </Text>
           <Stack width="max-content">
             <Button
